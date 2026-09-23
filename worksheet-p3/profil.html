@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Film Favorit Saya - Daffa Rendy Prameswara</title>
+</head>
+<body>
+
+  <!-- Header & Navigasi Utama -->
+  <header>
+    <h1>Daftar Film Favorit Saya</h1>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#daftar-film">Daftar Film</a></li>
+        <li><a href="#tambah-film">Tambah Film</a></li>
+        <li><a href="#tentang">Tentang Saya</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Konten Utama -->
+  <main>
+
+    <!-- Section 1: Tabel Data & Gambar -->
+    <section id="daftar-film">
+      <h2>Daftar Film yang Pernah Saya Tonton</h2>
+      
+      <figure>
+        <img src="poster-film.webp" 
+             alt="Poster film favorit yang memperlihatkan adegan utama bioskop" 
+             width="640" 
+             height="360" 
+             loading="lazy">
+        <figcaption>Koleksi film-film pilihan terbaik yang telah ditonton.</figcaption>
+      </figure>
+
+      <table>
+        <caption>Koleksi Film dan Rating Pribadi</caption>
+        <thead>
+          <tr>
+            <th scope="col">Judul Film</th>
+            <th scope="col">Tahun Rilis</th>
+            <th scope="col">Sutradara</th>
+            <th scope="col">Rating Saya</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Interstellar</th>
+            <td>2014</td>
+            <td>Christopher Nolan</td>
+            <td>9.5/10</td>
+          </tr>
+          <tr>
+            <th scope="row">Inception</th>
+            <td>2010</td>
+            <td>Christopher Nolan</td>
+            <td>9.0/10</td>
+          </tr>
+          <tr>
+            <th scope="row">Spirited Away</th>
+            <td>2001</td>
+            <td>Hayao Miyazaki</td>
+            <td>9.2/10</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 2: Form Input -->
+    <section id="tambah-film">
+      <h2>Tambah Film Baru ke Daftar</h2>
+
+      <form action="/simpan" method="post">
+        <p>
+          <label for="judul-film">Judul Film:</label><br>
+          <input type="text" id="judul-film" name="judul-film" required>
+        </p>
+        <p>
+          <label for="tahun-rilis">Tahun Rilis:</label><br>
+          <input type="number" id="tahun-rilis" name="tahun-rilis" min="1900" max="2026" required>
+        </p>
+        <p>
+          <label for="rating-film">Rating (1 - 10):</label><br>
+          <input type="number" id="rating-film" name="rating-film" min="1" max="10" step="0.1" required>
+        </p>
+        <button type="submit">Simpan</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="tentang">
+    <p>Daffa Rendy Prameswara · NIM: 25503198 · Kelas: C · 2026</p>
+  </footer>
+
+</body>
+</html>
