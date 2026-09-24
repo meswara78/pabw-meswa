@@ -16,6 +16,5 @@ Topik halaman saya: Daftar Film yang Pernah Saya Tonton
 - Kolom form: Judul Film, Tahun Rilis, Rating
 - Gambar: poster-film.webp
 
-## Catatan penggunaan AI
-
-Sebagian struktur HTML, tabel semantik, dan atribut form dibuat dengan bantuan AI (Gemini). Seluruh penyesuaian data pribadi, pengujian manual, dan repositori dikerjakan sendiri.
+## Catatan Penggunaan AI
+Sebagian Struktur HTML , tabel semantik, dan atribut formm dibuat dengan bantuan AI. Seluruh data pribadi, pengujian manual, dan repositori dikerjakan secara mandiri.
