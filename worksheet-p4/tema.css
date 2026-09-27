@@ -20,12 +20,20 @@
 }
 
 /* Ditulis di bawah media query agar bisa menang/override pilihan sistem */
+/* 2. Tombol pengalih tema manual (Override tanpa JavaScript) */
+.pengalih-tema {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Saat checkbox #tema DICENTANG -> Ubah tampilan ke TEMA TERANG */
 :root:has(#tema:checked) {
-  --color-bg:      #0F172A;
-  --color-fg:      #E2E8F0;
-  --color-surface: #1E293B;
-  --color-border:  #334155;
-  --color-primary: #7DA9F7;
-  --color-danger:  #FF8A8A;
-  --color-focus:   #FFC000;
+  --color-bg: #FFFFFF;         /* Latar belakang putih/terang */
+  --color-fg: #0F172A;         /* Teks gelap */
+  --color-surface: #F8FAFC;    /* Kartu/kontainer terang */
+  --color-border: #E2E8F0;     /* Garis tepi terang */
+  --color-primary: #1E40AF;    /* Warna utama tema terang */
+  --color-danger: #DC2626;
+  --color-focus: #2563EB;
 }
