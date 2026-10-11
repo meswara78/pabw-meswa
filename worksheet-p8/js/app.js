@@ -1,78 +1,48 @@
-// ==========================================
-// LEMBAR B — Data Halaman sebagai Variabel
-// ==========================================
-
-// Variabel data identitas (menggunakan const & let)
-const namaLengkap = "Daffa Rendy Prameswara";
-const nim = "25523198";
-const kelas = "C";
-let filmFavoritAktif = "Inception";
-
-// Objek data profil
+// Lembar B — Data profil sebagai variabel & objek
 const profil = {
-  nama: namaLengkap,
-  nim: nim,
-  kelas: kelas,
-  peran: "Penggemar Film & Mahasiswa Informatika",
-  genreFavorit: ["Sci-Fi", "Action", "Drama", "Thriller"],
-  kontak: {
-    email: "daffa@example.com"
-  }
+  nama: "Daffa Rendy Prameswara",
+  peran: "Mahasiswa Informatika yang belajar front-end",
+  keahlian: ["HTML", "CSS", "JavaScript", "Python"]
 };
 
-// Menggunakan Template Literal
-const kalimatProfil = `Halo, saya ${profil.nama} (${profil.nim}) dari kelas ${profil.kelas}.`;
-console.log(kalimatProfil);
+const jumlahProyek = 3;
 
-// Menggunakan Optional Chaining (?.) dan Nullish Coalescing (??)
-const kota = profil.alamat?.kota ?? "Kota belum diisi";
-console.log(`Kota asal: ${kota}`);
+// Template literal contoh
+const kalimat = `Nama saya ${profil.nama}, dan saya memiliki ${jumlahProyek} proyek unggulan.`;
+console.log(kalimat);
 
 
-// ==========================================
-// LEMBAR C — Dua Fungsi Murni (Pure Functions)
-// ==========================================
-
-// Fungsi 1: Menyusun kalimat perkenalan dari objek profil
+// Lembar C — Dua fungsi murni
+// 1. Menyusun kalimat perkenalan dari satu object
 function buatPerkenalan({ nama, peran }) {
   return `${nama} — ${peran}`;
 }
 
-// Fungsi 2: Merapikan daftar genre/keahlian menjadi satu baris teks
-const formatGenre = (daftar) => daftar.join(" · ");
+// 2. Merapikan daftar keahlian menjadi satu baris teks
+const formatKeahlian = (daftar) => daftar.join(" · ");
 
-// Uji coba fungsi murni di Console
-console.log("Perkenalan:", buatPerkenalan(profil));
-console.log("Genre Favorit:", formatGenre(profil.genreFavorit));
+// Uji coba pemanggilan fungsi ke Console
+console.log(buatPerkenalan(profil));
+console.log(formatKeahlian(profil.keahlian));
 
 
 // ==========================================
-// LEMBAR D — Data Array of Objects & Array Methods
+// Lembar D — Struktur data dan array methods (Taruh di sini paling bawah)
 // ==========================================
-
-// Array of Objects: Daftar Film
-const daftarFilm = [
-  { id: 1, judul: "Inception", tahun: 2010, rating: 8.8, selesai: true },
-  { id: 2, judul: "Interstellar", tahun: 2014, rating: 8.7, selesai: true },
-  { id: 3, judul: "Oppenheimer", tahun: 2023, rating: 8.9, selesai: true },
-  { id: 4, judul: "Dune: Part Two", tahun: 2024, rating: 8.6, selesai: false }
+const daftarProyek = [
+  { judul: "Halaman Profil", tahun: 2026, selesai: true },
+  { judul: "Katalog Produk", tahun: 2026, selesai: false },
+  { judul: "Sistem Informasi Katering", tahun: 2026, selesai: true }
 ];
 
-// Tampilkan data sebagai tabel di Console
-console.log("--- Seluruh Daftar Film ---");
-console.table(daftarFilm);
+// Pemeriksaan data di Console
+console.table(profil.keahlian);
+console.table(daftarProyek);
 
-// 1. Array Method FILTER: Filter film yang ratingnya >= 8.7
-const filmBagus = daftarFilm.filter((film) => film.rating >= 8.7);
-console.log("--- Film Rating High (>= 8.7) ---");
-console.table(filmBagus);
+// Menggunakan filter untuk proyek yang sudah selesai
+const selesai = daftarProyek.filter((proyek) => proyek.selesai);
+console.table(selesai);
 
-// 2. Array Method FIND: Cari film berjudul "Interstellar"
-const filmCari = daftarFilm.find((film) => film.judul === "Interstellar");
-console.log("--- Hasil Cari Film Interstellar ---");
-console.log(filmCari);
-
-// 3. Array Method MAP: Membuat ringkasan judul dan rating
-const ringkasanFilm = daftarFilm.map((film) => `${film.judul} (${film.tahun}) - Rating: ${film.rating}`);
-console.log("--- Ringkasan Film ---");
-console.log(ringkasanFilm);
+// Menggunakan find untuk mencari proyek tertentu
+const katalog = daftarProyek.find((proyek) => proyek.judul === "Katalog Produk");
+console.log(katalog);
