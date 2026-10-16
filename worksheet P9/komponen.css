@@ -1,0 +1,88 @@
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-4, 1rem);
+  background: var(--color-surface);
+  border-radius: var(--radius-md, 6px);
+  overflow: hidden;
+}
+
+th, td {
+  padding: var(--space-3, 0.75rem);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+th {
+  background: rgba(255, 255, 255, 0.05);
+  font-weight: 600;
+}
+
+/* Form Styling */
+.form-kolom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+input, select, textarea {
+  font: inherit;
+  width: 100%;
+  max-width: 300px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md, 6px);
+  background: var(--color-surface);
+  color: var(--color-fg);
+}
+
+button {
+  font: inherit;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: var(--radius-md, 6px);
+  background: var(--color-primary);
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+/* Tombol Pengalih Tema */
+.pengalih-tema {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tombol-tema {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md, 6px);
+  background: var(--color-surface);
+  color: var(--color-fg);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  user-select: none;
+}
+
+.tombol-tema:hover {
+  border-color: var(--color-primary);
+} 
+
+.error-message {
+  color: #d9534f;
+  font-size: var(--text-sm, 0.85rem);
+  display: block;
+  margin-top: 0.25rem;
+}

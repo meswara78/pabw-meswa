@@ -1,0 +1,39 @@
+/* 1. Tema gelap berdasarkan preferensi sistem */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg:      #0F172A;
+    --color-fg:      #E2E8F0;
+    --color-surface: #1E293B;
+    --color-border:  #334155;
+    --color-primary: #7DA9F7; /* Disesuaikan agar kontras tinggi di latar gelap */
+    --color-danger:  #FF8A8A;
+    --color-focus:   #FFC000;
+    --shadow-1:      0 1px 3px rgba(0, 0, 0, 0.45);
+  }
+}
+
+/* 2. Tombol pengalih tema manual (Override tanpa JavaScript) */
+.pengalih-tema {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Ditulis di bawah media query agar bisa menang/override pilihan sistem */
+/* 2. Tombol pengalih tema manual (Override tanpa JavaScript) */
+.pengalih-tema {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Saat checkbox #tema DICENTANG -> Ubah tampilan ke TEMA TERANG */
+:root:has(#tema:checked) {
+  --color-bg: #FFFFFF;         /* Latar belakang putih/terang */
+  --color-fg: #0F172A;         /* Teks gelap */
+  --color-surface: #F8FAFC;    /* Kartu/kontainer terang */
+  --color-border: #E2E8F0;     /* Garis tepi terang */
+  --color-primary: #1E40AF;    /* Warna utama tema terang */
+  --color-danger: #DC2626;
+  --color-focus: #2563EB;
+}
