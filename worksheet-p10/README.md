@@ -1,21 +1,28 @@
-# Worksheet P9 - Website Profil Film Avatar
+# PABW — Daffa Rendy Prameswara — 25523198
+## Pertemuan 10 — Asynchronous JavaScript: fetch, Promise, dan JSON
 
-Proyek ini merupakan lembar kerja (worksheet) ke-9 yang berisi pembuatan halaman web profil interaktif untuk film **Avatar** menggunakan HTML, CSS, dan JavaScript.
+### Topik Halaman
+Daftar Film Favorit Saya (Web-Based Application Development)
 
-## 📂 Struktur Berkas
+---
 
-Berikut adalah struktur berkas dalam proyek ini:
+### Deskripsi Tugas
+Pada pertemuan ini, dilakukan pembuatan **Data Layer** terpisah pada file `js/api.js` untuk mengambil data dari REST API publik menggunakan `fetch`, `async/await`, dan penanganan error `try/catch`. Hasil data tersebut kemudian dirender pada antarmuka halaman di `profil.html` melalui `js/app.js` dengan penanganan **4 Interface States** (Loading, Success, Failure, dan Empty).
 
+---
+
+### Struktur Berkas (worksheet-p10)
 ```text
-worksheet P9/
-├── js/
-│   ├── app.js            # Logika utama aplikasi JavaScript
-│   └── dom.js            # Manipulasi DOM dan event handling
-├── base.css              # Pengaturan gaya dasar (reset & panggagasan umum)
-├── komponen.css          # Gaya untuk komponen UI (tombol, kartu, dll.)
-├── layout.css            # Tata letak halaman (grid, flexbox, struktur)
-├── poster-film-avatar.jpeg# Gambar poster film Avatar
-├── profil.html           # Halaman utama profil film
-├── README.md             # Dokumentasi proyek
-├── tema.css              # Pengaturan skema warna / tema
-└── tokens.css            # Variabel CSS (color tokens, spacing, typography)
+worksheet-p10/
+├── profil.html
+├── README.md
+├── tokens.css
+├── base.css
+├── layout.css
+├── komponen.css
+├── tema.css
+├── poster-film-avatar.jpeg
+└── js/
+    ├── api.js      <-- Data Layer (fetch, response.ok check, export)
+    ├── app.js      <-- Presentation Layer (render data & 4 states)
+    └── dom.js
